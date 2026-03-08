@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Cursos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Cursos</h1>
+    <button onclick="window.location.href='index.html'">Voltar</button>
+    <button onclick="mostrarFormCadastroCurso()">Adicionar Curso</button>
+
+    <div id="form-cadastro-curso" style="display:none;">
+        <input type="text" id="nomeCurso" placeholder="Nome do curso">
+        <input type="text" id="descricaoCurso" placeholder="Descrição do curso">
+        <button onclick="cadastrarCurso()">Salvar</button>
+    </div>
+
+    <table border="1" id="tabela-cursos">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/curso.js"></script>
+</body>
+</html>

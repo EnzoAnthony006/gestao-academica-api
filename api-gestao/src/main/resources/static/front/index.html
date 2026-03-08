@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Gestão de Cursos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Sistema de Gestão de Cursos</h1>
+    <p>Bem-vindo ao Sistema de Gestão de Cursos!</p>
+
+    <div class="buttons">
+        <button onclick="window.location.href='alunos.html'">Gerenciar Alunos</button>
+        <button onclick="window.location.href='cursos.html'">Gerenciar Cursos</button>
+        <button onclick="window.location.href='Login.html'">Login</button>
+        <button id="btn-logout">Logout</button>
+    </div>
+</div>
+
+<script>
+    document.getElementById("btn-logout").onclick = function() {
+        localStorage.removeItem("token");
+        window.location.href = "Login.html";
+    }
+
+    window.onload = function() {
+        const token = localStorage.getItem("token");
+        if (!token) {
+            document.getElementById("btn-logout").style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>

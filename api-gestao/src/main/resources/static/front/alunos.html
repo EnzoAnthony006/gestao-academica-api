@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Alunos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Alunos</h1>
+
+    <button onclick="window.location.href='index.html'">Voltar</button>
+    <button onclick="mostrarFormCadastro()">Adicionar Aluno</button>
+    <button onclick="logout()">Logout</button>
+
+    <div id="form-cadastro" style="display:none;">
+        <input type="text" id="nome" placeholder="Nome do aluno">
+        <input type="email" id="email" placeholder="Email do aluno">
+        <button onclick="cadastrarAluno()">Salvar</button>
+    </div>
+
+    <table border="1" id="tabela-alunos">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/alunos.js"></script>
+
+</body>
+</html>
